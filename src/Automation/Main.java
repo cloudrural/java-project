@@ -3,7 +3,7 @@ public class Main {
 
   public static String sPath = System.getenv("sPath");
   public static String sPath1 = System.getenv("sPath1");
-  public static String filename = "./input.txt";
+  public static String filename = System.getenv("INPUT_DATA_FILE");
   public static void main(String args[]) {
 
      try {
