@@ -1,8 +1,8 @@
 import java.io.FileInputStream;
 public class Main {
 
-  public static String sPath = "/some/dir/data";
-  public static String sPath1 = "/some/dir/data/report";
+  public static String sPath = System.getenv("sPath");
+  public static String sPath1 = System.getenv("sPath1");
   public static String filename = "./file.txt";
   public static void main(String args[]) {
 
