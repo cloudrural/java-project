@@ -1,5 +1,10 @@
 pipeline {
    agent any
+
+    parameters {        
+        file(description: 'Input File')
+    }
+
    stages {
         stage('Checkout') {
             steps {
@@ -14,8 +19,8 @@ pipeline {
         }
         stage('Execute Script') {
             steps {
-                withFileParameter('file.txt') {
-                  sh "java -classpath bins/Automation/ Main"
+                fileParam('file.txt') {
+                  sh 'java -classpath bins/Automation/ Main'
                 }
             }
         }
